@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Apple iPhone 15",
+    "price": "79999",
+    "description": "128GB, Blue, A16 Bionic Chip",
+    "images": [
+      {
+        "images": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80"
+      }
+    ],
+    "ratings": "4.8",
+    "stocks": "25",
+    "no of reviews": "1200",
+    "createdAt": "2026-07-17"
+  },
+  {
+    "name": "Samsung Galaxy S25",
+    "price": "74999",
+    "description": "256GB, Phantom Black",
+    "images": [
+      {
+        "images": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&q=80"
+      }
+    ],
+    "ratings": "4.7",
+    "stocks": "18",
+    "no of reviews": "980",
+    "createdAt": "2026-07-17"
+  },
+  {
+    "name": "Sony WH-1000XM5",
+    "price": "29999",
+    "description": "Wireless Noise Cancelling Headphones",
+    "images": [
+      {
+        "images": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
+      }
+    ],
+    "ratings": "4.9",
+    "stocks": "30",
+    "no of reviews": "650",
+    "createdAt": "2026-07-17"
+  },
+  {
+    "name": "Dell Inspiron 15",
+    "price": "58999",
+    "description": "Intel Core i5, 16GB RAM, 512GB SSD",
+    "images": [
+      {
+        "images": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=80"
+      }
+    ],
+    "ratings": "4.5",
+    "stocks": "12",
+    "no of reviews": "430",
+    "createdAt": "2026-07-17"
+  },
+  {
+    "name": "Apple Watch Series 10",
+    "price": "42999",
+    "description": "GPS, 45mm, Midnight",
+    "images": [
+      {
+        "images": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=500&q=80"
+      }
+    ],
+    "ratings": "4.8",
+    "stocks": "20",
+    "no of reviews": "520",
+    "createdAt": "2026-07-17"
+  },
+  {
+    "name": "Nike Air Max 270",
+    "price": "9999",
+    "description": "Men's Running Shoes",
+    "images": [
+      {
+        "images": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80"
+      }
+    ],
+    "ratings": "4.6",
+    "stocks": "50",
+    "no of reviews": "780",
+    "createdAt": "2026-07-17"
+  },
+  {
+    "name": "HP Pavilion Gaming Laptop",
+    "price": "72999",
+    "description": "Ryzen 7, RTX 4050, 16GB RAM",
+    "images": [
+      {
+        "images": "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500&q=80"
+      }
+    ],
+    "ratings": "4.7",
+    "stocks": "15",
+    "no of reviews": "390",
+    "createdAt": "2026-07-17"
+  },
+  {
+    "name": "boAt Airdopes 141",
+    "price": "1499",
+    "description": "Bluetooth Truly Wireless Earbuds",
+    "images": [
+      {
+        "images": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&q=80"
+      }
+    ],
+    "ratings": "4.4",
+    "stocks": "100",
+    "no of reviews": "3400",
+    "createdAt": "2026-07-17"
+  },
+  {
+    "name": "Canon EOS 1500D",
+    "price": "41999",
+    "description": "24.1MP DSLR Camera with 18-55mm Lens",
+    "images": [
+      {
+        "images": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&q=80"
+      }
+    ],
+    "ratings": "4.6",
+    "stocks": "10",
+    "no of reviews": "270",
+    "createdAt": "2026-07-17"
+  },
+  {
+    "name": "Samsung 55-inch 4K Smart TV",
+    "price": "54999",
+    "description": "Crystal UHD Smart LED TV",
+    "images": [
+      {
+        "images": "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=500&q=80"
+      }
+    ],
+    "ratings": "4.8",
+    "stocks": "14",
+    "no of reviews": "610",
+    "createdAt": "2026-07-17"
+  }
+]

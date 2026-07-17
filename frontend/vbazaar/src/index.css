@@ -1,0 +1,14 @@
+ :root{
+    --blue:#2f4bf5;
+    --blue-dark:#1e35c9;
+    --ink:#1a1d29;
+    --muted:#6b7280;
+    --line:#e6e8ee;
+    --bg:#f6f7fb;
+    --green:#16a34a;
+    --amber:#d97706;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+  a{text-decoration:none;color:inherit;}
