@@ -1,21 +1,31 @@
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
-    // cartItems here
+    // products here
         const [products, setProducts] = useState([]);
+        const [searchParams] = useSearchParams();
+        const keyword = searchParams.get("keyword");
+
         useEffect(()=>{
-        fetch("http://localhost:5000/api/v1/products")
+        const url = keyword
+        ? `http://localhost:5000/api/v1/products?keyword=${keyword}`
+        : `http://localhost:5000/api/v1/products`;
+        fetch(url)
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(data);
+                    console.log(data.products);
                     setProducts(data.products);
+             
                 })
                 .catch((error) => {
                     console.log(error);
                 });
-        }, []);
+        }, [keyword]);
+
         // recommended array here
        const [recommended,setRecommended] = useState([]);
        useEffect(()=>{
@@ -60,30 +70,9 @@ function Home() {
         }, []);
 
     return ( 
+      
     <div>
-    <div className="topbar">
-    <div className="left"><span>🚚 Free Shipping on orders over $50</span></div>
-    <div className="right"><span>⏱ 30-Day Returns</span><span>❓ Help Center</span></div>
-    </div>
-
-    <header className="main">
-    <div className="logo"><span className="b"></span> vBazaar</div>
-    <div className="search">
-        <input type="text" placeholder="Search for products..."/>
-        <button aria-label="search">🔍</button>
-    </div>
-    <nav className="links">
-        <a href="#">Products</a>
-        <a href="#">Categories ▾</a>
-        <a href="#">Deals</a>
-        <a href="#">New Arrivals</a>
-    </nav>
-    <div className="header-actions">
-        <div className="item">♡ <span>Wishlist</span></div>
-        <div className="item">👤 <span>Account</span></div>
-        <div className="item">🛒 <span>Cart</span><span className="cart-badge" id="cart-count">8</span></div>
-    </div>
-    </header>
+   
 
     <main>
     <div className="page-title-row">
@@ -190,51 +179,7 @@ function Home() {
     </div>
     </main>
 
-    <footer>
-    <div className="footer-grid">
-        <div>
-        <div className="flogo"> vBazaar</div>
-        <p>Your one-stop shop htmlFor the best products at the best prices.</p>
-        <div
-        style={{
-            marginTop: "14px",
-            display: "flex",
-            gap: "12px",
-        }}
->               <span>📘</span><span>📷</span><span>🐦</span><span>▶️</span>
-        </div>
-        </div>
-        <div>
-        <h4>Shop</h4>
-        <ul><li>All Products</li><li>Categories</li><li>Deals</li><li>New Arrivals</li></ul>
-        </div>
-        <div>
-        <h4>Customer Service</h4>
-        <ul><li>Contact Us</li><li>Shipping Policy</li><li>Returns & Exchanges</li><li>FAQ</li></ul>
-        </div>
-        <div>
-        <h4>Company</h4>
-        <ul><li>About Us</li><li>Careers</li><li>Privacy Policy</li><li>Terms & Conditions</li></ul>
-        </div>
-        <div>
-        <h4>Subscribe to our newsletter</h4>
-        <p>Get updates on new products and offers</p>
-        <div className="sub-box">
-            <input type="email" placeholder="Enter your email"/>
-            <button>Subscribe</button>
-        </div>
-        <div
-            style={{
-                marginTop: "16px",
-                display: "flex",
-                gap: "8px",
-                fontSize: "20px",
-            }}
-            >💳 🟠 🅿️ 🍎 🇬</div>
-        </div>
-    </div>
-    <div className="copyright">© 2025 vBazaar. All rights reserved.</div>
-    </footer>
+  
 
     
     </div>
