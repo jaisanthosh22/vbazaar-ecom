@@ -2,6 +2,7 @@ import Search from "./Search";
 import { Link } from "react-router-dom";
 
 
+
 function Header() {
     return ( 
     <>
@@ -11,7 +12,7 @@ function Header() {
     </div>
 
     <header className="main">
-    <Link to="/"> <div className="logo"><span className="b"></span> vBazaar</div> </Link>      
+    <Link to="/" > <div className="logo"><span className="b"></span> vBazaar</div> </Link>      
     
      <Search/>
      <Link to="/products">Products</Link>
@@ -23,7 +24,8 @@ function Header() {
     <div className="header-actions">
         <div className="item">♡ <span>Wishlist</span></div>
         <div className="item">👤 <span>Account</span></div>
-        <div className="item">🛒 <span>Cart</span><span className="cart-badge" id="cart-count">8</span></div>
+        <Link to="/cart"> <div className="item">🛒 <span>Cart</span><span className="cart-badge" id="cart-count">8</span></div></Link>
+       
     </div>
     </header>
     

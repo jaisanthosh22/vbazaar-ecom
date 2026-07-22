@@ -1,0 +1,33 @@
+<style>
+  :root{
+    --blue:#2f4bf5;
+    --blue-dark:#1e35c9;
+    --muted:#6b7280;
+    --line:#e5e7eb;
+    --bg:#f5f6fa;
+    --green:#16a34a;
+  }
+  body{background:var(--bg);font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111827;}
+  .breadcrumb{font-size:13px;}
+  .card{border:1px solid var(--line);border-radius:12px;}
+  .item-row{padding:22px;border-bottom:1px solid var(--line);}
+  .item-row:last-child{border-bottom:none;}
+  .item-row img{width:96px;height:96px;object-fit:cover;border-radius:10px;}
+  .price-blue{color:var(--blue);font-weight:700;font-size:15px;}
+  .qty-control button{width:32px;height:32px;padding:0;line-height:1;}
+  .qty-control span{width:32px;display:inline-block;text-align:center;font-weight:600;}
+  .link-btn{color:var(--muted);font-size:13px;border:none;background:none;}
+  .link-btn:hover{color:#111;}
+  .close-x{border:none;background:none;color:#9ca3af;font-size:16px;}
+  .icon-circle{width:28px;height:28px;border-radius:50%;background:#eef2ff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;color:var(--blue);flex-shrink:0;}
+  .icon-circle.lg{width:36px;height:36px;font-size:15px;}
+  .free-text{color:var(--green);font-weight:600;}
+  .total-amt{font-size:20px;font-weight:800;}
+  .savings-text{color:var(--green);font-size:13px;}
+  .btn-checkout{background:var(--blue);border:none;font-weight:700;padding:12px;}
+  .btn-checkout:hover{background:var(--blue-dark);}
+  .payment-badge{border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:11px;font-weight:700;color:#374151;background:#fafafa;}
+  .btn-outline-soft{border:1px solid var(--line);background:#fff;color:#111;}
+  .btn-outline-soft:hover{background:#f4f4f7;}
+  .perk-card{border:1px solid var(--line);border-radius:12px;background:#fff;}
+</style>

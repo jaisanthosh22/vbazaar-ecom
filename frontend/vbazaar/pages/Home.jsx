@@ -1,10 +1,14 @@
 
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import "./Home.css";
+import { useContext } from "react";
+import { CartContext } from "../pages/CartContext";
 
 function Home() {
     // products here
+        const navigate = useNavigate();
+        const { addToCart } = useContext(CartContext);
         const [products, setProducts] = useState([]);
         const [searchParams] = useSearchParams();
         const keyword = searchParams.get("keyword");
@@ -32,42 +36,7 @@ function Home() {
         fetch("http://localhost:5000/api/v1/products/recommend").then(res=>res.json()).then(data=>{ console.log(data);setRecommended(data.products)}).catch((err)=>console.log(err))
        },[])
 
-       
-
-        // Paste clearCart function here
-        const clearCart = () => {
-            setCartItems([]);
-        };
-
-        // Paste removeItem function here
-        const removeItem = (id) => {
-            setCartItems(cartItems.filter(item => item.id !== id));
-        };
-
-        // Paste changeQty function here
-        const changeQty = (id, delta) => {
-            setCartItems(
-            cartItems.map(item =>
-                item.id === id
-                ? {
-                    ...item,
-                    qty: Math.max(1, item.qty + delta)
-                    }
-                : item
-            )
-            );
-        };
-
-        // Timer
-        const [seconds, setSeconds] = useState(14 * 60 + 28);
-
-        useEffect(() => {
-            const interval = setInterval(() => {
-            setSeconds(prev => (prev > 0 ? prev - 1 : 0));
-            }, 1000);
-
-            return () => clearInterval(interval);
-        }, []);
+    
 
     return ( 
       
@@ -130,11 +99,14 @@ function Home() {
                 <div className="stock">
                     Stock : {product.stocks}
                 </div>
-
-                <button className="continue-btn">
+                
+                
+                
+                <div><button onClick={() => {addToCart(product);   navigate("/cart");}} className="continue-btn">
                     Add to Cart
                 </button>
-
+                </div>
+                
             </div>
 
         </div>
